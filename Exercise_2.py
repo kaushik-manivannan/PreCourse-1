@@ -18,7 +18,7 @@ class Stack:
         # Checks if the linked list is empty
         if not self.head:
             self.head = Node(data)
-        # Checks if the linked list contains atleast one value
+        # Checks if the linked list contains atleast one node
         else:
             newNode = Node(data) # Creates a node with the data
             newNode.next = self.head # Sets the next pointer of the new node to point to the current head node
@@ -26,12 +26,12 @@ class Stack:
         
     # Removes a node from the beginning of the linked list and return the data of the removed node
     def pop(self):
-        # Checks if the linked list contains more than one value
+        # Checks if the linked list contains more than one node
         if self.head and self.head.next:
             poppedValue = self.head.data
             self.head = self.head.next # Sets the new head node to be the next node of the current head node
             return poppedValue
-        # Checks if the linked list contains only one value
+        # Checks if the linked list contains only one node
         elif self.head and not self.head.next:
             poppedValue = self.head.data
             self.head = None # Sets the head node to None
